@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pride Flag Identifier</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i" />
+    <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css">
+    <script src="index.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <header>
+      <h1>Pride Flag Identifier</h1>
+    </header>
+    <div id="topBar">
+      <div class="homeButton" onclick="setPage(0);" title="Home">
+        <i class="fas fa-home"></i>
+      </div>
+      <div class="createFlagButton" onclick="setPage(1);" title="Create flag">
+        <i class="fa fa-brush"></i>
+      </div>
+      <div class="showAllFlagsButton" onclick="setPage(2);" title="Show all flags">
+        <i class="fas fa-eye"></i>
+      </div>
+      <div class="searchBar">
+        <i class="fas fa-search"></i>
+        <input type="text" id="searchInput" placeholder="Search..." oninput="search(this);">
+      </div>
+    </div>
+    <div id="mainBox" class="contentBox">
+      <div class="content">
+
+      </div>
+    </div>
+    <div id="createBox" class="contentBox"></div>
+    <div id="allBox" class="contentBox"></div>
+  </body>
+</html>
