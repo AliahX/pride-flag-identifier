@@ -319,6 +319,6 @@ function generateFlag(style, colors, strip=false) {
   if(strip) {
     return SVGData;
   } else {
-    return `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">${SVGData}\n</svg>`
+    return `<svg version="1.1" width="100%" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">${SVGData}\n</svg>`
   }
 }
