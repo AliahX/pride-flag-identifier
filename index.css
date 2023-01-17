@@ -10,7 +10,6 @@ body {
 }
 
 #topBar {
-  height: 50px;
   margin: 10px;
   padding: 10px;
   border: 1px solid #8C8273;
@@ -25,16 +24,16 @@ h1 {
   padding-top: 0.67em;
 }
 
-.homeButton, .showAllFlagsButton, .createFlagButton {
+.pageButton {
   display: inline-block;
   margin: 15px;
 }
 
-.homeButton i, .showAllFlagsButton i, .createFlagButton i{
+.pageButton i {
   cursor: pointer;
 }
 
-.showAllFlagsButton, .createFlagButton {
+.showAllFlagsButton, .identifyFlagButton {
   margin-left: 0px;
 }
 
@@ -60,16 +59,14 @@ h1 {
   width: calc(100% - 25px)
 }
 
-.contentBox {
+.contentWrapper {
   overflow-y: scroll;
   scrollbar-width: none;
-  height: calc(100% - 1.34em - 134.6933px);
+  height: calc(100% - 1.34em - 142.6933px);
 }
 
-.content {
-  display: inline-grid;
-  /* width: calc(33.333% - 42px); */
-  height: 160.5px;
+.contentBox {
+  display: inline-block;
   margin: 10px;
   padding: 10px;
   text-align: center;
@@ -77,12 +74,91 @@ h1 {
   border-radius: 4px;
   background-color: #1E2021;
   box-shadow: 10px 10px 5px #181a1b;
-  cursor: pointer;
-  transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-out;
   overflow-x: clip;
 }
 
-.content:hover {
+.contentBox.fullWidth {
+  width: calc(100% - 42px);
+}
+
+.contentBox.hover {
+  cursor: pointer;
+}
+
+.contentBox.hover:hover {
   margin: 6px;
   padding: 14px;
+}
+
+.flagBox {
+  width: calc(25% - 42px);
+}
+
+.flagName {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+svg {
+  display: block;
+}
+
+.flagBox svg {
+  margin: auto;
+}
+
+.createBox {
+  height: 92%;
+  display: flex;
+}
+
+
+.colorButton {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border: none;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 37.5%;
+  transition: all 0.1s ease-out;
+}
+
+.colorButton:hover:not(.active) {
+  margin: 4px;
+  width: 22px;
+  height: 22px;
+}
+
+.colorButton.active {
+  margin: 1px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
+select {
+  height: 29px;
+  padding: 5px;
+  padding-left: 8px;
+  border: 1px solid #8C8273;
+  border-radius: 4px;
+  background-color: #1E2021;
+  box-shadow: 10px 10px 5px #181a1b;
+  color: #D8D4CF;
+  outline: none;
+}
+
+#colorBox {
+  width: fit-content;
+}
+
+.flagOptions {
+  width: fit-content;
+}
+
+#drawFlag > * {
+  cursor: pointer;
 }
