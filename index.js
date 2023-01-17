@@ -3,6 +3,9 @@ color = "#ffffff"
 
 
 function setPage(index) {
+  $(".pageButton").removeClass("active");
+  $(`div[onclick="setPage(${index});"]`).addClass("active");
+
   $("#mainBox").css("display", index == 0 ? "block" : "none");
   $("#createBox").css("display", index == 1 ? "block" : "none");
   $("#allBox").css("display", index == 2 ? "block" : "none");

@@ -29,6 +29,35 @@ flagList = {
         "gray",
         "black"
       ]
+    }, {
+      "style": "5-stripe",
+      "colors": [
+        "green",
+        "lightgreen",
+        "yellow",
+        "orange",
+        "red"
+      ]
+    }, {
+      "style": "3-stripe",
+      "colors": [
+        "white",
+        "black",
+        "white"
+      ]
+    }, {
+      "style": "9-stripe",
+      "colors": [
+        "black",
+        "gray",
+        "white",
+        "lavender",
+        "green",
+        "lavender",
+        "white",
+        "gray",
+        "black"
+      ]
     }
   ],
   "aromantic": [
@@ -212,6 +241,48 @@ flagList = {
         "lightblue"
       ]
     }
+  ],
+  "femboy": [
+    {
+      "style": "7-stripe",
+      "colors": [
+        "redpurple",
+        "pink",
+        "white",
+        "lightblue",
+        "white",
+        "pink",
+        "redpurple"
+      ]
+    }
+  ],
+  "androgyne": [
+    {
+      "style": "3-stripe-vertical",
+      "colors": [
+        "redpurple",
+        "blueviolet",
+        "cyan"
+      ]
+    }
+  ],
+  "gender-nonconforming": [
+    {
+      "style": "3-stripe-bi",
+      "colors": [
+        "purple",
+        "white",
+        "purple"
+      ]
+    }
+  ],
+  "ingender": [
+    {
+      "style": "solid",
+      "colors": [
+        "white"
+      ]
+    }
   ]
 }
 
@@ -226,11 +297,13 @@ colorList = {
   "lightgreen": "#b8f483",
   "darkblue": "#2851a9",
   "blue": "#1d92f6",
+  "cyan": "#00b9e8",
   "lightblue": "#88c4ed",
   "redpurple": "#d60370",
   "purple": "#9c158e",
   "lightpurple": "#9b4f96",
   "lavender": "#ab6cce",
+  "blueviolet": "#8f2ff2",
   "pink": "#f67cc5",
   "brown": "#593219",
   "black": "#000000",
@@ -239,7 +312,28 @@ colorList = {
   "white": "#ffffff"
 }
 
+colorGroups = {
+  "red": ["red", "darkorange", "orange", "redpurple", "purple"],
+  "orange": ["red", "darkorange", "orange", "lightorange"],
+  "yellow": ["orange", "lightorange", "yellow"],
+  "green": ["green", "palegreen", "lightgreen"],
+  "blue": ["darkblue", "blue", "cyan", "lightblue"],
+  "purple": ["red", "redpurple", "purple", "lightpurple", "lavender", "blueviolet", "pink"],
+  "pink": ["red", "redpurple", "purple", "lightpurple", "lavender", "blueviolet", "pink"],
+  "brown": ["brown"],
+  "black": ["black"],
+  "gray": ["darkgray", "gray", "white"],
+  "white": ["white", "gray"]
+}
+
 styleList = {
+  "solid": [
+    "rect width='100%' height='100%'"
+  ],
+  "2-stripe": [
+    "rect width='100%' height='50%' y='00%'",
+    "rect width='100%' height='50%' y='50%'"
+  ],
   "3-stripe": [
     "rect width='100%' height='33.33%' y='00.00%'",
     "rect width='100%' height='33.33%' y='33.33%'",
@@ -249,6 +343,11 @@ styleList = {
     "rect width='100%' height='40.00%' y='00.00%'",
     "rect width='100%' height='20.00%' y='40.00%'",
     "rect width='100%' height='40.00%' y='60.00%'"
+  ],
+  "3-stripe-vertical": [
+    "rect width='33.33%' height='100%' x='00.00%'",
+    "rect width='33.33%' height='100%' x='33.33%'",
+    "rect width='33.33%' height='100%' x='66.66%'"
   ],
   "4-stripe": [
     "rect width='100%' height='25.00%' y='00.00%'",
@@ -280,6 +379,27 @@ styleList = {
     "rect width='100%' height='14.28%' y='71.40%'",
     "rect width='100%' height='14.28%' y='85.68%'"
   ],
+  "8-stripe": [
+    "rect width='100%' height='12.50%' y='00.00%'",
+    "rect width='100%' height='12.50%' y='12.50%'",
+    "rect width='100%' height='12.50%' y='25.00%'",
+    "rect width='100%' height='12.50%' y='37.50%'",
+    "rect width='100%' height='12.50%' y='50.00%'",
+    "rect width='100%' height='12.50%' y='62.50%'",
+    "rect width='100%' height='12.50%' y='75.00%'",
+    "rect width='100%' height='12.50%' y='87.50%'"
+  ],
+  "9-stripe": [
+    "rect width='100%' height='11.11%' y='00.00%'",
+    "rect width='100%' height='11.11%' y='11.11%'",
+    "rect width='100%' height='11.11%' y='22.22%'",
+    "rect width='100%' height='11.11%' y='33.33%'",
+    "rect width='100%' height='11.11%' y='44.44%'",
+    "rect width='100%' height='11.11%' y='55.55%'",
+    "rect width='100%' height='11.11%' y='66.66%'",
+    "rect width='100%' height='11.11%' y='77.77%'",
+    "rect width='100%' height='11.11%' y='88.88%'"
+  ],
   "intersex": [
     "rect width='100%' height='100.00%' y='00.00%'",
     "circle cx='150' cy='100' r='50.00' fill='none' stroke-width='15.94'"
@@ -304,7 +424,6 @@ styleList = {
     "polygon points='0,50.39 0,149.61 47.55,100'",
   ]
 }
-
 
 function generateFlag(style, colors, strip=false) {
   SVGData = "";
