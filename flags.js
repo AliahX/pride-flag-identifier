@@ -242,20 +242,6 @@ flagList = {
       ]
     }
   ],
-  "femboy": [
-    {
-      "style": "7-stripe",
-      "colors": [
-        "redpurple",
-        "pink",
-        "white",
-        "lightblue",
-        "white",
-        "pink",
-        "redpurple"
-      ]
-    }
-  ],
   "androgyne": [
     {
       "style": "3-stripe-vertical",
